@@ -1,0 +1,6 @@
+framework module Pods_BiteSizedTests {
+  umbrella header "Pods-BiteSizedTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

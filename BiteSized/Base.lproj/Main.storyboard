@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BiteSized" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tJZ-GN-LiG" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="20" y="184" width="374" height="461.5"/>
+                                <color key="backgroundColor" red="0.35333877800000002" green="0.49804222580000002" blue="0.16571980710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ROv-Py-3xE" userLabel="progressStack">
+                                <rect key="frame" x="30" y="124" width="354" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idK-zD-1yW">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="HOe-7e-DW0"/>
+                                            <constraint firstAttribute="width" constant="30" id="XUA-q1-WDa"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="xmark" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="refreshAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGe-LO-20p"/>
+                                        </connections>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vod-JE-HqZ">
+                                        <rect key="frame" x="40" y="14" width="274" height="3"/>
+                                        <color key="backgroundColor" red="0.31733196969999999" green="0.44558435680000003" blue="0.14954072239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="T5a-ht-iD4"/>
+                                        </constraints>
+                                        <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6i-p1-BzO">
+                                        <rect key="frame" x="324" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="B97-eC-5K6"/>
+                                            <constraint firstAttribute="width" constant="30" id="wdg-ct-h9d"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="arrow.counterclockwise" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kPE-qm-dM0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35333877800000002" green="0.49804222580000002" blue="0.16571980710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ROv-Py-3xE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="2dO-W8-tGX"/>
+                            <constraint firstItem="ROv-Py-3xE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="BSw-Fo-lpu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tJZ-GN-LiG" secondAttribute="trailing" constant="20" id="BpF-lx-QkR"/>
+                            <constraint firstItem="tJZ-GN-LiG" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.6" id="IUd-as-tIj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ROv-Py-3xE" secondAttribute="trailing" constant="30" id="JDr-6w-DJl"/>
+                            <constraint firstItem="tJZ-GN-LiG" firstAttribute="top" secondItem="ROv-Py-3xE" secondAttribute="bottom" constant="30" id="SOT-yr-g7c"/>
+                            <constraint firstItem="tJZ-GN-LiG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hvg-RA-De9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cardsProgressBar" destination="vod-JE-HqZ" id="Ed4-Xk-1Hx"/>
+                        <outlet property="cardsView" destination="tJZ-GN-LiG" id="81g-n3-zKE"/>
+                        <outlet property="refreshButton" destination="idK-zD-1yW" id="h85-yb-by2"/>
+                        <outlet property="undoButton" destination="f6i-p1-BzO" id="5EW-6w-fhs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.counterclockwise" catalog="system" width="56" height="64"/>
+        <image name="xmark" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
